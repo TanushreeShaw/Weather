@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Current Temperature</title>
+        <style>
+            body
+            {
+                text-align: center;
+                margin-top: 200px;
+                color: black;
+                font-size: medium;
+                font-family: Arial, Helvetica, sans-serif;
+                margin-top: 0;
+                
+            }
+
+        </style>
+    </head>
+<body>
+    <img src="{{ image }}">
+    <h1> The Latitude : {{ latitude }}. </h1>
+    <h1> The Longitude : {{ longitude }}. </h1>
+    <h1> The current temperature (F) is : {{ temp }} degrees. </h1>
+    <h1> The current pressure is : {{ pressure }}. </h1>
+    <h1> The current humidity is : {{ humidity }}. </h1>
+    
+</body>
+</html>
