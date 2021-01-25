@@ -9,6 +9,7 @@ picfolder = os.path.join('static','pics')
 app.config['UPLOAD_FOLDER'] = picfolder
 
 @app.route('/temperature', methods=['POST'])
+
 def temperature():
     pic1 = os.path.join(app.config['UPLOAD_FOLDER'], "weather1.jpg")
     zipcode = request.form['zip']
@@ -23,7 +24,6 @@ def temperature():
     longitude = json_object['coord']['lon']
     return render_template('temperature.html', image = pic1, latitude=latitude, longitude=longitude, temp=temp_f, pressure=pressure, humidity=humidity)
     
-
 @app.route('/')
 def index():
 	return render_template('index.html')
